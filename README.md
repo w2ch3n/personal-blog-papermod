@@ -5,6 +5,8 @@
 - 站点：<https://w2ch3n.github.io/>
 - 技术栈：Hugo 0.168（extended）+ [PaperMod](https://github.com/adityatelange/hugo-PaperMod)
 - 源文件在 `main` 分支；GitHub Actions 构建后把静态站点推送到 `master`，GitHub Pages 从 `master` 发布。
+- 部署仓库：[`w2ch3n/w2ch3n.github.io`](https://github.com/w2ch3n/w2ch3n.github.io)
+- [`w2ch3n/personal-blog-papermod`](https://github.com/w2ch3n/personal-blog-papermod) 是同步镜像，自动部署只在部署仓库运行。
 
 ## 本地预览
 
