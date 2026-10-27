@@ -7,7 +7,9 @@ categories:
     - 读书笔记
 tags:
     - 投资理财
-image: /img/2022/11/cold_city.jpg
+cover:
+    image: "/img/2022/11/cold_city.jpg"
+    alt: "指数基金定投指南读书笔记"
 draft: false
 ---
 

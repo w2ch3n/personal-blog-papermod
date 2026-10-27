@@ -1,0 +1,132 @@
+baseURL: "https://w2ch3n.github.io/"
+title: "wzc 的成长档案"
+theme: "hugo-PaperMod"
+locale: "zh-CN"
+defaultContentLanguage: "zh"
+hasCJKLanguage: true
+enableRobotsTXT: true
+enableEmoji: true
+enableInlineShortcodes: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+summaryLength: 30
+
+pagination:
+  pagerSize: 5
+
+permalinks:
+  post: "/p/:slug/"
+  page: "/:slug/"
+
+taxonomies:
+  category: categories
+  tag: tags
+  series: series
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+menu:
+  main:
+    - identifier: home
+      name: 主页
+      url: /
+      weight: 1
+    - identifier: albums
+      name: 相册
+      url: /albums/
+      weight: 2
+    - identifier: resources
+      name: 资源
+      url: /resources/
+      weight: 3
+    - identifier: about
+      name: 关于
+      url: /about/
+      weight: 4
+    - identifier: archives
+      name: 归档
+      url: /archives/
+      weight: 5
+    - identifier: search
+      name: 搜索
+      url: /search/
+      weight: 6
+
+params:
+  env: production
+  description: "记录一个后端工程师的学习与生活：技术笔记、读书思考、旅行相册和常用资源。"
+  author: "wzc"
+  defaultTheme: auto
+  disableThemeToggle: false
+  disableSpecial1stPost: true
+  DateFormat: "2006-01-02"
+  ShowShareButtons: false
+  ShowReadingTime: false
+  ShowWordCounts: false
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowToc: true
+  TocOpen: false
+  ShowLastMod: true
+  ShowFullTextinRSS: true
+  comments: false
+  hideFooter: false
+  mainSections: ["post"]
+
+  profileMode:
+    enabled: false
+
+  homeInfoParams:
+    Title: "你好，我是 wzc"
+    Content: "后端工程师 · 记录学习、读书与生活"
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/w2ch3n"
+    - name: rss
+      url: "index.xml"
+    - name: email
+      url: "mailto:714479133@qq.com"
+
+  assets:
+    favicon: "img/logo.jpg"
+    favicon16x16: "img/logo.jpg"
+    favicon32x32: "img/logo.jpg"
+    apple_touch_icon: "img/logo.jpg"
+    safari_pinned_tab: "img/logo.jpg"
+    disableFingerprinting: false
+
+  cover:
+    hidden: false
+    hiddenInList: false
+    hiddenInSingle: false
+
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary"]
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    codeFences: true
+    guessSyntax: true
+    lineNos: true
+    noClasses: false
+    tabWidth: 4
+  tableOfContents:
+    startLevel: 2
+    endLevel: 4
+    ordered: true

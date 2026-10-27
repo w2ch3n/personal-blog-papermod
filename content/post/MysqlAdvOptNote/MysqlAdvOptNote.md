@@ -7,7 +7,9 @@ categories:
     - 学习笔记
 tags: 
     - MySQL
-image: /img/2022/03/field.jpg
+cover:
+    image: "/img/2022/03/field.jpg"
+    alt: "Mysql高级优化"
 draft: true
 ---
 

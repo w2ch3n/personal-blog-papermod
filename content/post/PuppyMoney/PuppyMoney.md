@@ -7,7 +7,9 @@ categories:
     - 读书笔记
 tags: 
     - 投资理财
-image: /img/2022/10/autumn_forest.jpg
+cover:
+    image: "/img/2022/10/autumn_forest.jpg"
+    alt: "小狗钱钱读书笔记"
 draft: false
 ---
 

@@ -7,7 +7,9 @@ categories:
     - 学习笔记
 tags:
     - Spring
-image: /img/2022/03/trees_road.jpg
+cover:
+    image: "/img/2022/03/trees_road.jpg"
+    alt: "Spring笔记"
 draft: false
 ---
 

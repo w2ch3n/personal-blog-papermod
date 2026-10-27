@@ -8,14 +8,9 @@ aliases:
   - about-us
   - about-hugo
   - contact
-menu:
-    main:
-        name: 关于
-        weight: 4
-        params:
-            icon: user
+hidemeta: true
+ShowToc: false
 comments: false
-license: false
 ---
 
 我是 wzc，一名后端工程师，1999 年出生。

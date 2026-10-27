@@ -7,7 +7,9 @@ categories:
     - 读书笔记
 tags: 
     - 心理
-image: /img/2023/02/photo-1491036775913-3fbc5c455842.jpg
+cover:
+    image: "/img/2023/02/photo-1491036775913-3fbc5c455842.jpg"
+    alt: "蛤蟆先生去看心理医生读书笔记"
 draft: false
 ---
 

@@ -1,27 +1,15 @@
 {{- $page := .Page -}}
-{{- $cover := $page.Params.image -}}
+{{- $cover := $page.Params.cover.image | default "" -}}
 {{- $captions := $page.Params.captions | default dict -}}
-{{- $widths := cond $page.Site.Params.ImageProcessing.Content.Enabled $page.Site.Params.ImageProcessing.Content.Widths nil -}}
-<p class="album-gallery">
-{{- range $page.Resources.ByType "image" -}}
-    {{- if ne .Name $cover -}}
-        {{- $caption := index $captions .Name -}}
-        {{- $alt := $caption | default (strings.TrimSuffix (path.Ext .Name) .Name | replaceRE "[-_]" " ") -}}
-        {{- $attributes := dict
-            "src" .RelPermalink
-            "width" .Width
-            "height" .Height
-            "alt" $alt
-            "loading" "lazy"
-            "class" "gallery-image"
-            "data-flex-grow" (div (mul .Width 100) .Height)
-            "data-flex-basis" (printf "%dpx" (div (mul .Width 240) .Height))
-            "sizes" "(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px"
-        -}}
-        {{- with $caption -}}
-            {{- $attributes = merge $attributes (dict "title" . "data-title-escaped" (. | htmlEscape)) -}}
+<div class="album-gallery">
+    {{- range $page.Resources.ByType "image" -}}
+        {{- if ne .Name $cover -}}
+            {{- $caption := index $captions .Name -}}
+            {{- $alt := $caption | default (strings.TrimSuffix (path.Ext .Name) .Name | replaceRE "[-_]" " ") -}}
+            {{- $thumb := .Resize "900x" -}}
+            <a class="album-photo" href="{{ .RelPermalink }}" data-pswp-width="{{ .Width }}" data-pswp-height="{{ .Height }}" target="_blank" rel="noopener">
+                <img src="{{ $thumb.RelPermalink }}" width="{{ $thumb.Width }}" height="{{ $thumb.Height }}" alt="{{ $alt }}" loading="lazy" decoding="async">
+            </a>
         {{- end -}}
-        {{- partial "helper/responsive-image" (dict "Resource" . "Widths" $widths "Attributes" $attributes) -}}
     {{- end -}}
-{{- end -}}
-</p>
+</div>

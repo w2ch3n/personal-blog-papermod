@@ -8,7 +8,9 @@ categories:
 tags: 
     - 个人提升
     - 摆脱欲望
-image: /img/2023/02/pexels-yaroslav-shuraev-6882086.jpg
+cover:
+    image: "/img/2023/02/pexels-yaroslav-shuraev-6882086.jpg"
+    alt: "欲望的博弈：如何用正念摆脱上瘾读书笔记"
 draft: false
 ---
 

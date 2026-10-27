@@ -7,7 +7,9 @@ categories:
     - 学习笔记
 tags: 
     - MyBatis
-image: /img/2022/03/lake.jpg
+cover:
+    image: "/img/2022/03/lake.jpg"
+    alt: "Mybatis笔记"
 draft: false
 ---
 

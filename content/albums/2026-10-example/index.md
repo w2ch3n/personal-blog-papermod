@@ -3,10 +3,12 @@ title: 示例相册：路上的风景
 description: 示例 · 把这里换成你自己的照片
 date: 2026-10-01
 location: 示例
-image: cover.jpg
+cover:
+    image: cover.jpg
+    alt: 示例相册封面
+ShowToc: false
+ShowShareButtons: false
 comments: false
-license: false
-toc: false
 captions:
   01.jpg: 海边的日落
   02.jpg: 城市的冬天

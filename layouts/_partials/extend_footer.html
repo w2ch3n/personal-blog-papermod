@@ -1,0 +1,14 @@
+{{- if and .IsPage (eq .Section "albums") -}}
+<script type="module">
+    import PhotoSwipeLightbox from '{{ "vendor/photoswipe/photoswipe-lightbox.esm.min.js" | relURL }}';
+
+    if (document.querySelector('.album-gallery')) {
+        const lightbox = new PhotoSwipeLightbox({
+            gallery: '.album-gallery',
+            children: 'a.album-photo',
+            pswpModule: () => import('{{ "vendor/photoswipe/photoswipe.esm.min.js" | relURL }}')
+        });
+        lightbox.init();
+    }
+</script>
+{{- end -}}

@@ -7,7 +7,9 @@ categories:
     - 读书笔记
 tags: 
     - 投资理财
-image: /img/2022/10/autumn_forest_mountain.jpg
+cover:
+    image: "/img/2022/10/autumn_forest_mountain.jpg"
+    alt: "富爸爸穷爸爸读书笔记"
 draft: false
 ---
 
