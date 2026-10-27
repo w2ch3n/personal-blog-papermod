@@ -1,4 +1,4 @@
-{{- if and .IsPage (eq .Section "albums") -}}
+{{- if eq .Section "albums" -}}
 <script type="module">
     import PhotoSwipeLightbox from '{{ "vendor/photoswipe/photoswipe-lightbox.esm.min.js" | relURL }}';
 
