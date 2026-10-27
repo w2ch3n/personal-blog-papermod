@@ -1,0 +1,41 @@
+{{ define "main" }}
+{{- $trips := .Pages.ByDate.Reverse -}}
+<header class="page-header">
+    <h1>{{ .Title }}</h1>
+    {{- with .Description }}
+        <div class="post-description">{{ . }}</div>
+    {{- end }}
+</header>
+
+{{- with .Content }}
+    <div class="post-content md-content">{{ . }}</div>
+{{- end }}
+
+<div class="travel-timeline">
+    {{- range $trips.GroupByDate "2006" }}
+        <section class="timeline-year">
+            <h2 class="timeline-year-label">{{ .Key }}</h2>
+            {{- range .Pages }}
+                {{- $trip := . -}}
+                <a class="timeline-entry" href="{{ .RelPermalink }}">
+                    <time class="timeline-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "01.02" }}</time>
+                    <div class="timeline-main">
+                        <h3>{{ .Title }}</h3>
+                        {{- with .Params.location }}
+                            <p class="timeline-location">{{ . }}</p>
+                        {{- end }}
+                    </div>
+                    <div class="timeline-cover">
+                        {{- with $trip.Params.cover.image }}
+                            {{- with $trip.Resources.GetMatch . }}
+                                {{- $thumb := .Fill "160x120" }}
+                                <img src="{{ $thumb.RelPermalink }}" width="{{ $thumb.Width }}" height="{{ $thumb.Height }}" alt="{{ $trip.Title }}" loading="lazy">
+                            {{- end }}
+                        {{- end }}
+                    </div>
+                </a>
+            {{- end }}
+        </section>
+    {{- end }}
+</div>
+{{ end }}

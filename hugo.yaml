@@ -36,9 +36,9 @@ menu:
       name: 主页
       url: /
       weight: 1
-    - identifier: albums
-      name: 相册
-      url: /albums/
+    - identifier: travel
+      name: 旅行
+      url: /travel/
       weight: 2
     - identifier: resources
       name: 资源
@@ -59,7 +59,7 @@ menu:
 
 params:
   env: production
-  description: "记录一个后端工程师的学习与生活：技术笔记、读书思考、旅行相册和常用资源。"
+  description: "ch3n 的长期存档：技术、读书和旅行。"
   author: "ch3n"
   defaultTheme: light
   disableThemeToggle: false

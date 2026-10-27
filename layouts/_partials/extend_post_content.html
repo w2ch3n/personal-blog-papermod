@@ -1,11 +1,11 @@
-{{- if eq .Section "albums" -}}
+{{- if eq .Section "travel" -}}
 <script type="module">
     import PhotoSwipeLightbox from '{{ "vendor/photoswipe/photoswipe-lightbox.esm.min.js" | relURL }}';
 
-    if (document.querySelector('.album-gallery')) {
+    if (document.querySelector('.travel-gallery')) {
         const lightbox = new PhotoSwipeLightbox({
-            gallery: '.album-gallery',
-            children: 'a.album-photo',
+            gallery: '.travel-gallery',
+            children: 'a.travel-photo',
             pswpModule: () => import('{{ "vendor/photoswipe/photoswipe.esm.min.js" | relURL }}')
         });
         lightbox.init();

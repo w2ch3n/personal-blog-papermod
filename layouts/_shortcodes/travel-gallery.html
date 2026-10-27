@@ -1,0 +1,15 @@
+{{- $page := .Page -}}
+{{- $cover := $page.Params.cover.image | default "" -}}
+{{- $captions := $page.Params.captions | default dict -}}
+<div class="travel-gallery">
+    {{- range $page.Resources.ByType "image" -}}
+        {{- if ne .Name $cover -}}
+            {{- $caption := index $captions .Name -}}
+            {{- $alt := $caption | default (strings.TrimSuffix (path.Ext .Name) .Name | replaceRE "[-_]" " ") -}}
+            {{- $thumb := .Resize "900x" -}}
+            <a class="travel-photo" href="{{ .RelPermalink }}" data-pswp-width="{{ .Width }}" data-pswp-height="{{ .Height }}" target="_blank" rel="noopener">
+                <img src="{{ $thumb.RelPermalink }}" width="{{ $thumb.Width }}" height="{{ $thumb.Height }}" alt="{{ $alt }}" loading="lazy" decoding="async">
+            </a>
+        {{- end -}}
+    {{- end -}}
+</div>

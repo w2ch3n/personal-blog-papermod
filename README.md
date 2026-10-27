@@ -1,6 +1,6 @@
 # ch3n.log
 
-一个后端工程师的个人站，记录技术笔记、读书思考、旅行相册和常用资源。
+一个后端工程师的个人站，记录技术、读书和旅行，也放一些常用资源。
 
 - 站点：<https://w2ch3n.github.io/>
 - 技术栈：Hugo 0.168（extended）+ [PaperMod](https://github.com/adityatelange/hugo-PaperMod)
@@ -26,34 +26,34 @@ git -C themes/hugo-PaperMod checkout 1181196
 
 ## 写文章
 
-文章放在 `content/post/`。推荐用 page bundle，这样封面和配图可以被 Hugo 处理成响应式尺寸：
+文章放在 `content/post/`，一篇一个 page bundle：
 
 ```text
 content/post/my-note/
 ├── index.md
-└── cover.jpg
+└── images/
+    ├── 01.png
+    └── 02.png
 ```
 
 ```bash
 hugo new content/post/my-note/index.md
 ```
 
-封面写在 front matter 里：
+正文里用相对路径引用：
 
-```yaml
-cover:
-  image: cover.jpg
-  alt: 封面说明
+```md
+![说明](images/01.png)
 ```
 
-旧文章仍然保留 `/p/<slug>/` 的地址，不需要迁移。
+所有旧文章都已经迁移成 page bundle，图片放在各自的 `images/` 下，不再依赖 `static/img` 和 `../../`；`/p/<slug>/` 的文章地址保持不变。
 
-## 加相册
+## 加旅行
 
-一本相册一个目录：
+一次旅行一个目录：
 
 ```text
-content/albums/2026-05-dali/
+content/travel/2026-05-dali/
 ├── index.md
 ├── cover.jpg
 ├── 01.jpg
@@ -81,10 +81,39 @@ captions:
 
 写一小段这次旅行。
 
-{{< album-gallery >}}
+{{< travel-gallery >}}
 ```
 
 照片按文件名排序，`cover.jpg` 作为封面，不会出现在照片墙里。照片墙用本地自带的 PhotoSwipe，点击可以看大图。建议长边压到 1600px、JPEG 质量 80 左右，原图不要提交到仓库。
+
+旅行列表按年份分组，每条显示日期、标题、地点和封面；点进去是这次旅行写下的日记，下面是照片墙。旅行的 `date` 决定它在时间线上的位置。
+
+## 照片怎么处理
+
+原图不要提交到仓库。把原图留在手机相册、移动硬盘或网盘里，仓库只放导出后的 Web 尺寸照片。
+
+每张照片建议：
+
+- 长边 1600px 左右，JPEG 质量 80～85；
+- 单张控制在 200～400KB；
+- 一次旅行选 9～20 张，不要全传；
+- 导出时去掉 GPS 等 EXIF 信息，但保留正确的旋转方向。
+
+macOS 可以用自带的 `sips`：
+
+```bash
+sips -Z 1600 -s format jpeg -s formatOptions 82 原图.jpg --out 01.jpg
+```
+
+Linux / Windows 装了 ImageMagick 的话：
+
+```bash
+magick 原图.jpg -auto-orient -resize '1600x1600>' -strip -quality 82 01.jpg
+```
+
+HEIC 照片先转成 JPEG；在浏览器里也可以用 [Squoosh](https://squoosh.app/) 本地压缩，不会上传图片。
+
+照片提交进 Git 后，即使以后删掉，历史里仍然会保留。所以第一次提交前就压好，不要先传原图再后悔。
 
 ## 加资源
 
