@@ -1,16 +1,13 @@
 ---
 title: Redis笔记
 slug: RedisNote
-author: wzc
+author: ch3n
 date: 2022-08-14
 categories: 
     - 学习笔记
 tags: 
     - Redis
     - NoSQL
-cover:
-    image: "/img/2022/11/autumn_forest.jpg"
-    alt: "Redis笔记"
 draft: false
 ---
 

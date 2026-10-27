@@ -1,15 +1,12 @@
 ---
 title: Spring笔记
 slug: SpringNote
-author: wzc
+author: ch3n
 date: 2022-03-07
 categories: 
     - 学习笔记
 tags:
     - Spring
-cover:
-    image: "/img/2022/03/trees_road.jpg"
-    alt: "Spring笔记"
 draft: false
 ---
 

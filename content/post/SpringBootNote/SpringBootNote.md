@@ -1,7 +1,7 @@
 ---
 title: SpringBoot笔记
 slug: SpringBootNote
-author: wzc
+author: ch3n
 date: 2022-07-09T11:18:24+08:00
 categories: 
     - 学习笔记
@@ -9,9 +9,6 @@ tags:
     - Spring
     - Spring MVC
     - Spring Boot
-cover:
-    image: "/img/2022/07/nature_park.jpg"
-    alt: "SpringBoot笔记"
 draft: false
 ---
 

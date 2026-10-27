@@ -1,15 +1,12 @@
 ---
 title: 认知觉醒读书笔记
 slug: CognitiveAwaken
-author: wzc
+author: ch3n
 date: 2022-03-26
 categories: 
     - 读书笔记
 tags:
     - 自我提升
-cover:
-    image: "/img/2022/04/oasis.jpg"
-    alt: "认知觉醒读书笔记"
 draft: false
 mermaid: true
 ---

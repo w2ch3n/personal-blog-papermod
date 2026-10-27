@@ -1,15 +1,12 @@
 ---
 title: 下班后开启新的一天读书笔记
 slug: StartANewDayAfterWork
-author: wzc
+author: ch3n
 date: 2023-02-26T16:36:35+08:00
 categories: 
     - 读书笔记
 tags: 
     - 自我提升
-cover:
-    image: "/img/2023/02/34378168630_2ef45b6833_k.jpg"
-    alt: "下班后开启新的一天读书笔记"
 draft: false
 ---
 

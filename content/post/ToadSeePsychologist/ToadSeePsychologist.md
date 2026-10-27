@@ -1,15 +1,12 @@
 ---
 title: 蛤蟆先生去看心理医生读书笔记
 slug: ToadSeePsychologist
-author: wzc
+author: ch3n
 date: 2023-02-04T22:17:32+08:00
 categories: 
     - 读书笔记
 tags: 
     - 心理
-cover:
-    image: "/img/2023/02/photo-1491036775913-3fbc5c455842.jpg"
-    alt: "蛤蟆先生去看心理医生读书笔记"
 draft: false
 ---
 

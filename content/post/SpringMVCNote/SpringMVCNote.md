@@ -1,16 +1,13 @@
 ---
 title: SpringMVC笔记
 slug: SpringMVCNote
-author: wzc
+author: ch3n
 date: 2022-03-12
 categories: 
     - 学习笔记
 tags:
     - Spring
     - Spring MVC
-cover:
-    image: "/img/2022/04/beach.jpg"
-    alt: "SpringMVC笔记"
 draft: false
 ---
 

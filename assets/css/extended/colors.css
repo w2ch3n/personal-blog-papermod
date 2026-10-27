@@ -1,0 +1,9 @@
+:root {
+    --theme: #FAF6ED;
+    --entry: #FAF6ED;
+    --border: #E7DDCB;
+}
+
+.list {
+    background: var(--theme);
+}

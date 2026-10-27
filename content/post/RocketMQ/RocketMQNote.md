@@ -1,7 +1,7 @@
 ---
 title: RocketMQNote
 slug: RocketMQNote
-author: wzc
+author: ch3n
 date: 2022-12-16T16:16:49+08:00
 categories: 
     - 学习笔记

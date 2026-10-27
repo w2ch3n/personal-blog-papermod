@@ -1,15 +1,12 @@
 ---
 title: 富爸爸穷爸爸读书笔记
 slug: RichFatherPoorFather
-author: wzc
+author: ch3n
 date: 2022-10-15T15:48:50+08:00
 categories: 
     - 读书笔记
 tags: 
     - 投资理财
-cover:
-    image: "/img/2022/10/autumn_forest_mountain.jpg"
-    alt: "富爸爸穷爸爸读书笔记"
 draft: false
 ---
 

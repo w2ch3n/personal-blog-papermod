@@ -1,15 +1,12 @@
 ---
 title: 指数基金定投指南读书笔记
 slug: IndexFundInvestmentGuide
-author: wzc
+author: ch3n
 date: 2022-11-20
 categories:
     - 读书笔记
 tags:
     - 投资理财
-cover:
-    image: "/img/2022/11/cold_city.jpg"
-    alt: "指数基金定投指南读书笔记"
 draft: false
 ---
 

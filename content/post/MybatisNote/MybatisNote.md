@@ -1,15 +1,12 @@
 ---
 title: Mybatis笔记
 slug: MybatisNote
-author: wzc
+author: ch3n
 date: 2022-03-07T18:24:52+08:00
 categories: 
     - 学习笔记
 tags: 
     - MyBatis
-cover:
-    image: "/img/2022/03/lake.jpg"
-    alt: "Mybatis笔记"
 draft: false
 ---
 
