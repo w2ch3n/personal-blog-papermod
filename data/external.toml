@@ -1,0 +1,4 @@
+[PhotoSwipe]
+Style = "/vendor/photoswipe/photoswipe.css"
+Core = "/vendor/photoswipe/photoswipe.esm.min.js"
+Lightbox = "/vendor/photoswipe/photoswipe-lightbox.esm.min.js"
