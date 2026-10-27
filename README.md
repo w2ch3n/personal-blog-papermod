@@ -4,9 +4,9 @@
 
 - 站点：<https://w2ch3n.github.io/>
 - 技术栈：Hugo 0.168（extended）+ [PaperMod](https://github.com/adityatelange/hugo-PaperMod)
-- 源文件在 `main` 分支；GitHub Actions 构建后把静态站点推送到 `master`，GitHub Pages 从 `master` 发布。
-- 部署仓库：[`w2ch3n/w2ch3n.github.io`](https://github.com/w2ch3n/w2ch3n.github.io)
-- [`w2ch3n/personal-blog-papermod`](https://github.com/w2ch3n/personal-blog-papermod) 是同步镜像，自动部署只在部署仓库运行。
+- 源码仓库：[`w2ch3n/personal-blog-papermod`](https://github.com/w2ch3n/personal-blog-papermod)，源码在 `main`
+- 部署仓库：[`w2ch3n/w2ch3n.github.io`](https://github.com/w2ch3n/w2ch3n.github.io)，只保留 `master` 构建产物
+- 推送 `main` 后，Actions 构建并把 `public/` 推送到部署仓库的 `master`，GitHub Pages 从 `master` 发布。
 
 ## 本地预览
 
@@ -94,12 +94,16 @@ captions:
 
 ## 部署
 
-推送到 `main` 后，`.github/workflows/deploy.yml` 会自动：
+推送 `main` 后，[`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) 会：
 
 1. 拉取主题 submodule；
 2. 用 Hugo 0.168 extended 构建；
-3. 把 `public/` 强制推送到 `master`。
+3. 用仓库 secret `DEPLOY_KEY`（对部署仓库有 write 权限的 deploy key）把 `public/` 强制推送到 `w2ch3n.github.io` 的 `master`；
+4. GitHub Pages 从 `master` 根目录发布。
 
-GitHub Pages 从 `master` 根目录发布，所以站点地址是 <https://w2ch3n.github.io/>。
+配置部署的步骤：
 
-> 仓库的默认分支目前是 `master`（发布产物），源码在 `main`。改代码/写文章时记得先切到 `main`。
+1. 在 `w2ch3n.github.io` 的 **Settings → Deploy keys** 添加公钥，勾选 **Allow write access**；
+2. 在 `personal-blog-papermod` 的 **Settings → Secrets and variables → Actions** 添加 `DEPLOY_KEY`，值为私钥。
+
+> 部署仓库只放构建产物，不要再往它的 `master` 手写内容；源码改动都在本仓库的 `main` 上完成。
