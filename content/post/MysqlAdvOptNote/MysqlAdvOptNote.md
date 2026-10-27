@@ -7,7 +7,7 @@ categories:
     - 学习笔记
 tags: 
     - MySQL
-image: img/2022/03/field.jpg
+image: /img/2022/03/field.jpg
 draft: true
 ---
 

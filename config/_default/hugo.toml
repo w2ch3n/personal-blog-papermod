@@ -1,0 +1,13 @@
+baseURL = "https://w2ch3n.github.io/"
+title = "wzc 的成长档案"
+theme = "hugo-theme-stack"
+
+defaultContentLanguage = "zh"
+locale = "zh-CN"
+hasCJKLanguage = true
+timeZone = "Asia/Shanghai"
+enableRobotsTXT = true
+summaryLength = 30
+
+[pagination]
+  pagerSize = 5

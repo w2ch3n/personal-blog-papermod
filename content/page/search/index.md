@@ -1,14 +1,15 @@
 ---
-title: "Search"
-slug: "search"
-layout: "search"
+title: 搜索
+description: 搜索站内文章
+slug: search
+layout: search
 outputs:
     - html
     - json
 menu:
     main:
         name: 搜索
-        weight: 4
-        params: 
+        weight: 6
+        params:
             icon: search
 ---

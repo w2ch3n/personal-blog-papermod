@@ -7,7 +7,7 @@ categories:
     - 学习笔记 
 tags:
     - Nginx 
-image: img/2022/07/colorful_river.jpg 
+image: /img/2022/07/colorful_river.jpg
 draft: false
 ---
 

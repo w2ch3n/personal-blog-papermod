@@ -8,7 +8,6 @@ categories:
 tags:
   - Spring 
   - Spring Cloud 
-image: img/year/month/pic_name.jpg 
 draft: true
 
 ---

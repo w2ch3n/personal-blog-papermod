@@ -9,7 +9,7 @@ tags:
     - Spring
     - Spring MVC
     - Spring Boot
-image: img/2022/07/nature_park.jpg
+image: /img/2022/07/nature_park.jpg
 draft: false
 ---
 

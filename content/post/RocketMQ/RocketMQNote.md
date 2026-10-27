@@ -8,7 +8,6 @@ categories:
 tags: 
     - 消息队列
     - RocketMQ
-image: img/year/month/pic_name.jpg
 draft: true
 ---
 

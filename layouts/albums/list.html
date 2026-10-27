@@ -1,0 +1,51 @@
+{{ define "main" }}
+{{- $page := . -}}
+{{- $paginator := .Paginate .Pages -}}
+<header class="album-header">
+    <h1 class="album-title">{{ .Title }}</h1>
+    {{- with .Params.description }}
+        <p class="album-description">{{ . }}</p>
+    {{- end }}
+</header>
+
+<div class="album-grid">
+    {{- range $paginator.Pages }}
+        {{- $album := . -}}
+        {{- $image := partial "helper/image" (dict "Image" .Params.image "Resources" .Resources "Context" .) -}}
+        <a class="album-card" href="{{ .RelPermalink }}">
+            <div class="album-cover">
+                {{- with $image }}
+                    {{ partial "helper/thumbnail-image" (dict
+                        "Resource" .Resource
+                        "Width" 480
+                        "Height" 360
+                        "Resize" $page.Site.Params.ImageProcessing.Thumbnail.Enabled
+                        "Attributes" (dict
+                            "src" .Permalink
+                            "alt" $album.Title
+                            "loading" "lazy"
+                            "width" .Width
+                            "height" .Height
+                        )
+                    ) }}
+                {{- else }}
+                    <div class="album-cover-placeholder"></div>
+                {{- end }}
+            </div>
+            <div class="album-meta">
+                <h2>{{ .Title }}</h2>
+                <p>
+                    {{- with .Date }}{{ .Format "2006.01" }}{{ end -}}
+                    {{- with .Params.location }} · {{ . }}{{ end -}}
+                </p>
+                {{- with .Params.description }}
+                    <p class="album-excerpt">{{ . }}</p>
+                {{- end }}
+            </div>
+        </a>
+    {{- end }}
+</div>
+
+{{ partial "pagination.html" $page }}
+{{ partialCached "footer/footer" $page }}
+{{ end }}

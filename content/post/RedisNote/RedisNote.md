@@ -8,7 +8,7 @@ categories:
 tags: 
     - Redis
     - NoSQL
-image: img/2022/11/autumn_forest.jpg
+image: /img/2022/11/autumn_forest.jpg
 draft: false
 ---
 

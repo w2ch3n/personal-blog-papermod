@@ -7,7 +7,7 @@ categories:
     - 读书笔记
 tags:
     - 投资理财
-image: img/2022/11/cold_city.jpg
+image: /img/2022/11/cold_city.jpg
 draft: false
 ---
 

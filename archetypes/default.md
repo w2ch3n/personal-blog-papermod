@@ -1,13 +1,7 @@
 ---
-title: {{ replace .Name "-" " " | title }}
-slug: 
-author: wzc
+title: "{{ replace .File.ContentBaseName "-" " " | title }}"
 date: {{ .Date }}
-categories: 
-    - 
-tags: 
-    - 
-image: img/year/month/pic_name.jpg
 draft: true
+categories: []
+tags: []
 ---
-

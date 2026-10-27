@@ -8,7 +8,7 @@ categories:
 tags:
     - Spring
     - Spring MVC
-image: img/2022/04/beach.png
+image: /img/2022/04/beach.jpg
 draft: false
 ---
 

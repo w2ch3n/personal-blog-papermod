@@ -7,7 +7,7 @@ categories:
     - 读书笔记
 tags: 
     - 心理
-image: img/2023/02/photo-1491036775913-3fbc5c455842.jpg
+image: /img/2023/02/photo-1491036775913-3fbc5c455842.jpg
 draft: false
 ---
 

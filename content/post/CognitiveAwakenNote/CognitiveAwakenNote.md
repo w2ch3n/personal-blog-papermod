@@ -7,7 +7,7 @@ categories:
     - 读书笔记
 tags:
     - 自我提升
-image: img/2022/04/oasis.jpg
+image: /img/2022/04/oasis.jpg
 draft: false
 mermaid: true
 ---

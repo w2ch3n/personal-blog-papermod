@@ -7,7 +7,7 @@ categories:
     - 读书笔记
 tags: 
     - 自我提升
-image: img/2023/02/34378168630_2ef45b6833_k.jpg
+image: /img/2023/02/34378168630_2ef45b6833_k.jpg
 draft: false
 ---
 

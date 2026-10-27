@@ -1,4 +1,7 @@
-public
+public/
+resources/_gen/
 .hugo_build.lock
-.idea
+.idea/
 .DS_Store
+node_modules/
+assets/jsconfig.json

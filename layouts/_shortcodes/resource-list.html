@@ -1,0 +1,43 @@
+{{- $groups := hugo.Data.resources -}}
+{{- if not $groups -}}
+    <p>还没有整理资源。</p>
+{{- else -}}
+    {{- range $groups -}}
+        <h2>{{ .category }}</h2>
+        {{- with .description }}
+            <p>{{ . }}</p>
+        {{- end }}
+        <table>
+            <thead>
+                <tr>
+                    <th>名称</th>
+                    <th>说明</th>
+                    <th>形式</th>
+                    <th>链接</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{- range .items }}
+                    <tr>
+                        <td>
+                            {{ .title }}
+                            {{- with .author }}<br><small>{{ . }}</small>{{ end -}}
+                        </td>
+                        <td>{{ .note }}</td>
+                        <td>
+                            {{ .format }}
+                            {{- with .license }}<br><small>{{ . }}</small>{{ end -}}
+                        </td>
+                        <td>
+                            {{- if .file -}}
+                                <a href="{{ .file | relURL }}" download>下载</a>
+                            {{- else if .link -}}
+                                <a href="{{ .link }}" target="_blank" rel="noopener noreferrer">打开</a>
+                            {{- end -}}
+                        </td>
+                    </tr>
+                {{- end }}
+            </tbody>
+        </table>
+    {{- end -}}
+{{- end -}}

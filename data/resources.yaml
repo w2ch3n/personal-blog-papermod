@@ -1,0 +1,53 @@
+- category: 阅读
+  description: 公版书和可以合法获取的书。电子书我只放公版，其他给官方链接。
+  items:
+    - title: Standard Ebooks
+      author: 志愿者维护的公版书库
+      format: EPUB / 在线阅读
+      license: 公版
+      link: https://standardebooks.org/
+      note: 排版干净，适合放进阅读器慢慢读。
+    - title: Project Gutenberg
+      author: 最老的公版电子书库
+      format: EPUB / HTML
+      license: 公版
+      link: https://www.gutenberg.org/
+      note: 数量大，经典文学和技术史材料很多。
+    - title: 我的读书笔记
+      author: 这个站
+      format: 文章
+      license: CC BY-NC-SA 4.0
+      link: /categories/读书笔记/
+      note: 读完之后真正留下来的那几句话。
+
+- category: 工具
+  description: 搭这个站和平时写东西会用到的东西。
+  items:
+    - title: Hugo
+      author: gohugoio
+      format: 静态站点生成器
+      license: Apache-2.0
+      link: https://gohugo.io/
+      note: 构建快，适合长期维护的个人站。
+    - title: Stack
+      author: CaiJimmy
+      format: Hugo 主题
+      license: GPL-3.0
+      link: https://stack.jimmycai.com/
+      note: 这个站正在用的主题，克制、耐看。
+    - title: Excalidraw
+      author: Excalidraw
+      format: 在线白板
+      license: MIT
+      link: https://excalidraw.com/
+      note: 画架构草图很快，手绘风格不抢内容。
+
+- category: 课程
+  description: 看过或者打算看的公开课。
+  items:
+    - title: MIT 6.824 Distributed Systems
+      author: MIT
+      format: 课程 / 论文
+      license: 免费公开
+      link: https://pdos.csail.mit.edu/6.824/
+      note: 想认真补分布式系统时，绕不开的一门课。

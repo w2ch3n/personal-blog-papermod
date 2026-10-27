@@ -8,7 +8,7 @@ categories:
 tags: 
     - 个人提升
     - 摆脱欲望
-image: img/2023/02/pexels-yaroslav-shuraev-6882086.jpg
+image: /img/2023/02/pexels-yaroslav-shuraev-6882086.jpg
 draft: false
 ---
 

@@ -1,0 +1,27 @@
+{{- $page := .Page -}}
+{{- $cover := $page.Params.image -}}
+{{- $captions := $page.Params.captions | default dict -}}
+{{- $widths := cond $page.Site.Params.ImageProcessing.Content.Enabled $page.Site.Params.ImageProcessing.Content.Widths nil -}}
+<p class="album-gallery">
+{{- range $page.Resources.ByType "image" -}}
+    {{- if ne .Name $cover -}}
+        {{- $caption := index $captions .Name -}}
+        {{- $alt := $caption | default (strings.TrimSuffix (path.Ext .Name) .Name | replaceRE "[-_]" " ") -}}
+        {{- $attributes := dict
+            "src" .RelPermalink
+            "width" .Width
+            "height" .Height
+            "alt" $alt
+            "loading" "lazy"
+            "class" "gallery-image"
+            "data-flex-grow" (div (mul .Width 100) .Height)
+            "data-flex-basis" (printf "%dpx" (div (mul .Width 240) .Height))
+            "sizes" "(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px"
+        -}}
+        {{- with $caption -}}
+            {{- $attributes = merge $attributes (dict "title" . "data-title-escaped" (. | htmlEscape)) -}}
+        {{- end -}}
+        {{- partial "helper/responsive-image" (dict "Resource" . "Widths" $widths "Attributes" $attributes) -}}
+    {{- end -}}
+{{- end -}}
+</p>
